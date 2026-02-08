@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой ИИ-Таролог | Персональные расклады</title>
+    <style>
+        :root {
+            --primary-gold: #f3e5ab;
+            --accent-purple: #9333ea;
+            --glass-bg: rgba(255, 255, 255, 0.07);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #0f0c29; /* Глубокий темный фон */
+            background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 40px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        .ai-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            background: rgba(147, 51, 234, 0.3);
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border: 1px solid var(--accent-purple);
+            color: #d8b4fe;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff, var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            text-align: left;
+            margin-bottom: 35px;
+            padding-left: 10px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .feature-item span {
+            margin-right: 10px;
+            color: var(--primary-gold);
+        }
+
+        .cta-button {
+            display: block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #d4af37 0%, #aa891a 100%);
+            color: #1a1a1a;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(170, 137, 26, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .free-label {
+            display: block;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="ai-badge">Neural Network AI</div>
+        <h1>Твой персональный ИИ-Таролог</h1>
+        
+        <p>Получи глубокий анализ ситуации с помощью нейросетей, обученных на тысячах трактовок классического Таро.</p>
+
+        <div class="features">
+            <div class="feature-item"><span>✦</span> 3 бесплатных расклада каждому</div>
+            <div class="feature-item"><span>✦</span> Индивидуальный разбор твоей судьбы</div>
+            <div class="feature-item"><span>✦</span> Работает 24/7 в Telegram</div>
+        </div>
+
+        <a href="https://t.me/ВАШ_ЛОГИН_БОТА" class="cta-button" onclick="reachMetrikaGoal()">Запустить расклад</a>
+        
+        <span class="free-label">Нажми, чтобы перейти в бот</span>
+    </div>
+
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(XXXXXXXX, "init", { // ЗАМЕНИ XXXXXXXX НА СВОЙ НОМЕР
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+
+       function reachMetrikaGoal() {
+           ym(XXXXXXXX, 'reachGoal', 'go_to_bot'); 
+           return true;
+       }
+    </script>
+</body>
+</html>
