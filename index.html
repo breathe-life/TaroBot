@@ -124,25 +124,23 @@
             <div class="feature-item"><span>✦</span> Работает 24/7 в Telegram</div>
         </div>
 
-        <a href="https://t.me/ВАШ_ЛОГИН_БОТА" class="cta-button" onclick="reachMetrikaGoal()">Запустить расклад</a>
+        <a href="https://t.me/ai_taro_free_bot" class="cta-button" onclick="reachMetrikaGoal()">Запустить расклад</a>
         
         <span class="free-label">Нажми, чтобы перейти в бот</span>
     </div>
 
     <script type="text/javascript">
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106713952', 'ym');
 
-       ym(XXXXXXXX, "init", { // ЗАМЕНИ XXXXXXXX НА СВОЙ НОМЕР
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
+       ym(106713952, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 
        function reachMetrikaGoal() {
-           ym(XXXXXXXX, 'reachGoal', 'go_to_bot'); 
+           ym(106713952,'reachGoal','click_v_bot'); 
            return true;
        }
     </script>
