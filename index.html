@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Твой ИИ-Таролог | Персональные расклады</title>
+    <title>Персональный Расклад Таро | Магия Судьбы</title>
     <style>
         :root {
             --primary-gold: #f3e5ab;
@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, sans-serif;
-            background: #0f0c29; /* Глубокий темный фон */
+            background: #0f0c29; 
             background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
             color: white;
             display: flex;
@@ -26,8 +26,8 @@
         }
 
         .container {
-            max-width: 400px;
-            padding: 40px 20px;
+            max-width: 450px;
+            padding: 40px 25px;
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
             border-radius: 30px;
@@ -36,12 +36,12 @@
             margin: 20px;
         }
 
-        .ai-badge {
+        .badge {
             display: inline-block;
             padding: 6px 15px;
             background: rgba(147, 51, 234, 0.3);
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
@@ -50,7 +50,7 @@
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 15px;
             letter-spacing: 1px;
             background: linear-gradient(to right, #fff, var(--primary-gold));
@@ -58,29 +58,41 @@
             -webkit-text-fill-color: transparent;
         }
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
+        .description {
+            font-size: 15px;
+            line-height: 1.5;
             color: #ccc;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+
+        .topics-title {
+            font-size: 14px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
 
         .features {
             text-align: left;
-            margin-bottom: 35px;
-            padding-left: 10px;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 20px;
         }
 
         .feature-item {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .feature-item span {
-            margin-right: 10px;
+            margin-right: 12px;
             color: var(--primary-gold);
+            font-size: 18px;
         }
 
         .cta-button {
@@ -102,47 +114,55 @@
             box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
         }
 
-        .free-label {
+        .footer-note {
             display: block;
-            margin-top: 15px;
-            font-size: 13px;
+            margin-top: 20px;
+            font-size: 12px;
             color: #888;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="ai-badge">Neural Network AI</div>
-        <h1>Твой персональный ИИ-Таролог</h1>
+        <div class="badge">Personal Reading</div>
+        <h1>Твой личный расклад Таро</h1>
         
-        <p>Получи глубокий анализ ситуации с помощью нейросетей, обученных на тысячах трактовок классического Таро.</p>
+        <p class="description">Открой завесу будущего. Я сделаю для тебя индивидуальный разбор на картах по системе <b>«Донат»</b> — ты сам определяешь ценность моей работы.</p>
 
+        <div class="topics-title">Популярные запросы:</div>
+        
         <div class="features">
-            <div class="feature-item"><span>✦</span> 3 бесплатных расклада каждому</div>
-            <div class="feature-item"><span>✦</span> Индивидуальный разбор твоей судьбы</div>
-            <div class="feature-item"><span>✦</span> Работает 24/7 в Telegram</div>
+            <div class="feature-item"><span>❤</span> Любовь, отношения и чувства партнера</div>
+            <div class="feature-item"><span>💰</span> Финансы, карьера и поиск призвания</div>
+            <div class="feature-item"><span>🧭</span> Выбор пути и совет на ближайшее время</div>
+            <div class="feature-item"><span>✨</span> Ответы на любые 3 твоих вопроса</div>
         </div>
 
-        <a href="https://t.me/ai_taro_free_bot" class="cta-button" onclick="reachMetrikaGoal()">Запустить расклад</a>
+        <a href="https://t.me/твой_ник_или_бот" class="cta-button" onclick="reachMetrikaGoal()">Получить расклад</a>
         
-        <span class="free-label">Нажми, чтобы перейти в бот</span>
+        <span class="footer-note">
+            Нажми, чтобы перейти в диалог.<br>
+            Оплата свободная (donation) после или во время расклада.
+        </span>
     </div>
 
     <script type="text/javascript">
-       (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106713952', 'ym');
+        // Яндекс.Метрика (оставлена твоя)
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106713952', 'ym');
 
-       ym(106713952, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        ym(106713952, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 
-       function reachMetrikaGoal() {
-           ym(106713952,'reachGoal','click_v_bot'); 
-           return true;
-       }
+        function reachMetrikaGoal() {
+            ym(106713952,'reachGoal','click_v_bot'); 
+            return true;
+        }
     </script>
 </body>
 </html>
