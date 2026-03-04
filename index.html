@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Персональный Расклад Таро | Магия Судьбы</title>
+    <title>Бесплатный Расклад Таро | Магия Судьбы</title>
     <style>
         :root {
             --primary-gold: #f3e5ab;
-            --accent-purple: #9333ea;
-            --glass-bg: rgba(255, 255, 255, 0.07);
+            --accent-purple: #a855f7;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --success-green: #4ade80;
         }
 
         body {
@@ -16,109 +17,122 @@
             padding: 0;
             font-family: 'Segoe UI', Roboto, sans-serif;
             background: #0f0c29; 
-            background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+            background: radial-gradient(circle at top, #24243e, #0f0c29);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            text-align: center;
         }
 
         .container {
-            max-width: 450px;
-            padding: 40px 25px;
+            max-width: 420px;
+            padding: 35px 25px;
             background: var(--glass-bg);
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(20px);
             border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
             margin: 20px;
+            text-align: center;
         }
 
-        .badge {
+        .promo-badge {
             display: inline-block;
-            padding: 6px 15px;
-            background: rgba(147, 51, 234, 0.3);
-            border-radius: 20px;
-            font-size: 11px;
+            padding: 6px 18px;
+            background: var(--success-green);
+            color: #064e3b;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2px;
             margin-bottom: 20px;
-            border: 1px solid var(--accent-purple);
-            color: #d8b4fe;
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
         }
 
         h1 {
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 15px;
-            letter-spacing: 1px;
+            line-height: 1.2;
             background: linear-gradient(to right, #fff, var(--primary-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .description {
-            font-size: 15px;
+        .hero-text {
+            font-size: 17px;
             line-height: 1.5;
-            color: #ccc;
+            color: #efeff1;
             margin-bottom: 25px;
         }
 
-        .topics-title {
-            font-size: 14px;
-            color: var(--primary-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .features {
-            text-align: left;
-            margin-bottom: 30px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
+        .offer-box {
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+            border: 1px dashed rgba(243, 229, 171, 0.3);
         }
 
-        .feature-item {
+        .offer-item {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
-            font-size: 14px;
+            font-size: 15px;
         }
 
-        .feature-item span {
+        .offer-item:last-child { margin-bottom: 0; }
+
+        .offer-item i {
             margin-right: 12px;
-            color: var(--primary-gold);
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .cta-button {
             display: block;
             text-decoration: none;
-            background: linear-gradient(135deg, #d4af37 0%, #aa891a 100%);
+            background: linear-gradient(135deg, #f3e5ab 0%, #eab308 100%);
             color: #1a1a1a;
-            padding: 18px;
+            padding: 22px;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(170, 137, 26, 0.3);
+            box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
+            animation: pulse 2s infinite;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
         }
 
-        .footer-note {
-            display: block;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
+        .timer-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            font-size: 14px;
+            color: var(--success-green);
+            font-weight: 500;
+        }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: var(--success-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success-green);
+        }
+
+        .limit-text {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 25px;
             line-height: 1.4;
         }
     </style>
@@ -126,36 +140,40 @@
 <body>
 
     <div class="container">
-        <div class="badge">Personal Reading</div>
-        <h1>Твой личный расклад Таро</h1>
+        <div class="promo-badge">Акция: 0 ₽ вместо 1500 ₽</div>
         
-        <p class="description">Открой завесу будущего. Получи глубокий анализ своей ситуации и ответы на 3 важных вопроса. Я помогу тебе найти верное решение и увидеть то, что скрыто от глаз</p>
+        <h1>Разберу твою ситуацию бесплатно</h1>
+        
+        <p class="hero-text">Получи честные расшифровки карт Таро, чтобы принять верное решение уже сегодня. Индивидуальный подход.</p>
 
-        <div class="topics-title">Популярные запросы:</div>
-        
-        <div class="features">
-            <div class="feature-item"><span>❤</span> Любовь, отношения и чувства партнера</div>
-            <div class="feature-item"><span>💰</span> Финансы, карьера и поиск призвания</div>
-            <div class="feature-item"><span>🧭</span> Выбор пути и совет на ближайшее время</div>
-            <div class="feature-item"><span>✨</span> Ответы на любые 3 твоих вопроса</div>
+        <div class="offer-box">
+            <div class="offer-item">✅ <b>До 3-х любых вопросов</b></div>
+            <div class="offer-item">✅ <b>Подробный текстовый разбор</b></div>
+            <div class="offer-item">✅ <b>Ответ в течение 30 минут</b></div>
         </div>
 
-        <a href="https://t.me/tarodonbot" class="cta-button" onclick="reachMetrikaGoal()">Получить расклад в Telegram</a>
+        <a href="https://t.me/tarodonbot" class="cta-button" onclick="reachMetrikaGoal()">
+            Спросить Таро бесплатно
+        </a>
+
+        <div class="timer-row">
+            <span class="dot"></span> Таролог на связи. Ответ через ~30 мин.
+        </div>
         
-        <span class="footer-note">
-            Нажми, чтобы перейти в диалог.<br>
-        </span>
+        <p class="limit-text">
+            *Предложение действует только для новых пользователей.<br>
+            Твои данные и вопросы строго конфиденциальны.
+        </p>
     </div>
 
     <script type="text/javascript">
-        // Яндекс.Метрика (оставлена твоя)
+        // Твоя Метрика (без изменений)
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106713952', 'ym');
-
         ym(106713952, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 
         function reachMetrikaGoal() {
