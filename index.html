@@ -203,9 +203,11 @@
             <div class="list-item">Формат: текстовая расшифровка карт в Telegram</div>
         </div>
 
-        <a href="https://t.me/tarodonbot" class="cta-button" onclick="reachMetrikaGoal()">
-            Разобраться в ситуации
-        </a>
+        <a href="https://t.me/tarodonbot" 
+   class="cta-button" 
+   onclick="console.log('Клик зафиксирован!'); ym(106713952, 'reachGoal', 'click_v_bot'); return true;">
+    Разобраться в ситуации
+</a>
 
         <div class="online-status">
             <span class="dot"></span> Таролог онлайн. Ответ в течение 30 мин.
@@ -225,11 +227,6 @@
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106713952', 'ym');
 
     ym(106713952, 'init', {ssr:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-
-        function reachMetrikaGoal() {
-            ym(106713952,'reachGoal','click_v_bot'); 
-            return true;
-        }
     </script>
     
 </body>
